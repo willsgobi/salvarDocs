@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "373949283109",
+    "firebase_url": "https://salvardocs-65f5b.firebaseio.com",
+    "project_id": "salvardocs-65f5b",
+    "storage_bucket": "salvardocs-65f5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373949283109:android:ca776199538d2278",
+        "android_client_info": {
+          "package_name": "br.com.williamsgobi.salvedoc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "373949283109-5b6besv5c1aqn4oba5bu4f8vrupu6dq6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3SO37KbYD9vR0rieKnvNkdZxymYNLzCs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "373949283109-5b6besv5c1aqn4oba5bu4f8vrupu6dq6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
