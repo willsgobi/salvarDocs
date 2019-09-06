@@ -1,0 +1,148 @@
+W/StorageUtil(19810): no auth token for request
+W/NetworkRequest(19810): no auth token for request
+E/StorageException(19810): StorageException has occurred.
+E/StorageException(19810): User does not have permission to access this object.
+E/StorageException(19810):  Code: -13021 HttpResult: 403
+E/StorageException(19810): The server has terminated the upload session
+E/StorageException(19810): java.io.IOException: The server has terminated the upload session
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.serverStateValid(com.google.firebase:firebase-storage@@17.0.0:340)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.shouldContinue(com.google.firebase:firebase-storage@@17.0.0:309)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.run(com.google.firebase:firebase-storage@@17.0.0:223)
+E/StorageException(19810): 	at com.google.firebase.storage.StorageTask.lambda$getRunnable$7(com.google.firebase:firebase-storage@@17.0.0:1106)
+E/StorageException(19810): 	at com.google.firebase.storage.StorageTask$$Lambda$10.run(Unknown Source:2)
+E/StorageException(19810): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+E/StorageException(19810): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+E/StorageException(19810): 	at java.lang.Thread.run(Thread.java:764)
+E/StorageException(19810): Caused by: java.io.IOException: {  "error": {    "code": 403,    "message": "Permission denied. Could not perform this operation"  }}
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.parseResponse(com.google.firebase:firebase-storage@@17.0.0:455)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.parseErrorResponse(com.google.firebase:firebase-storage@@17.0.0:435)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.processResponseStream(com.google.firebase:firebase-storage@@17.0.0:426)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.performRequest(com.google.firebase:firebase-storage@@17.0.0:280)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.performRequest(com.google.firebase:firebase-storage@@17.0.0:294)
+E/StorageException(19810): 	at com.google.firebase.storage.internal.ExponentialBackoffSender.sendWithExponentialBackoff(com.google.firebase:firebase-storage@@17.0.0:70)
+E/StorageException(19810): 	at com.google.firebase.storage.internal.ExponentialBackoffSender.sendWithExponentialBackoff(com.google.firebase:firebase-storage@@17.0.0:62)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.sendWithRetry(com.google.firebase:firebase-storage@@17.0.0:476)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.beginResumableUpload(com.google.firebase:firebase-storage@@17.0.0:277)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.run(com.google.firebase:firebase-storage@@17.0.0:218)
+E/StorageException(19810): 	... 5 more
+E/StorageException(19810): StorageException has occurred.
+E/StorageException(19810): User does not have permission to access this object.
+E/StorageException(19810):  Code: -13021 HttpResult: 403
+E/StorageException(19810): The server has terminated the upload session
+E/StorageException(19810): java.io.IOException: The server has terminated the upload session
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.serverStateValid(com.google.firebase:firebase-storage@@17.0.0:340)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.shouldContinue(com.google.firebase:firebase-storage@@17.0.0:309)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.run(com.google.firebase:firebase-storage@@17.0.0:223)
+E/StorageException(19810): 	at com.google.firebase.storage.StorageTask.lambda$getRunnable$7(com.google.firebase:firebase-storage@@17.0.0:1106)
+E/StorageException(19810): 	at com.google.firebase.storage.StorageTask$$Lambda$10.run(Unknown Source:2)
+E/StorageException(19810): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+E/StorageException(19810): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+E/StorageException(19810): 	at java.lang.Thread.run(Thread.java:764)
+E/StorageException(19810): Caused by: java.io.IOException: {  "error": {    "code": 403,    "message": "Permission denied. Could not perform this operation"  }}
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.parseResponse(com.google.firebase:firebase-storage@@17.0.0:455)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.parseErrorResponse(com.google.firebase:firebase-storage@@17.0.0:435)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.processResponseStream(com.google.firebase:firebase-storage@@17.0.0:426)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.performRequest(com.google.firebase:firebase-storage@@17.0.0:280)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.performRequest(com.google.firebase:firebase-storage@@17.0.0:294)
+E/StorageException(19810): 	at com.google.firebase.storage.internal.ExponentialBackoffSender.sendWithExponentialBackoff(com.google.firebase:firebase-storage@@17.0.0:70)
+E/StorageException(19810): 	at com.google.firebase.storage.internal.ExponentialBackoffSender.sendWithExponentialBackoff(com.google.firebase:firebase-storage@@17.0.0:62)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.sendWithRetry(com.google.firebase:firebase-storage@@17.0.0:476)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.beginResumableUpload(com.google.firebase:firebase-storage@@17.0.0:277)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.run(com.google.firebase:firebase-storage@@17.0.0:218)
+E/StorageException(19810): 	... 5 more
+E/StorageException(19810): StorageException has occurred.
+E/StorageException(19810): User does not have permission to access this object.
+E/StorageException(19810):  Code: -13021 HttpResult: 403
+E/StorageException(19810): The server has terminated the upload session
+E/StorageException(19810): java.io.IOException: The server has terminated the upload session
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.serverStateValid(com.google.firebase:firebase-storage@@17.0.0:340)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.shouldContinue(com.google.firebase:firebase-storage@@17.0.0:309)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.run(com.google.firebase:firebase-storage@@17.0.0:223)
+E/StorageException(19810): 	at com.google.firebase.storage.StorageTask.lambda$getRunnable$7(com.google.firebase:firebase-storage@@17.0.0:1106)
+E/StorageException(19810): 	at com.google.firebase.storage.StorageTask$$Lambda$10.run(Unknown Source:2)
+E/StorageException(19810): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+E/StorageException(19810): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+E/StorageException(19810): 	at java.lang.Thread.run(Thread.java:764)
+E/StorageException(19810): Caused by: java.io.IOException: {  "error": {    "code": 403,    "message": "Permission denied. Could not perform this operation"  }}
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.parseResponse(com.google.firebase:firebase-storage@@17.0.0:455)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.parseErrorResponse(com.google.firebase:firebase-storage@@17.0.0:435)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.processResponseStream(com.google.firebase:firebase-storage@@17.0.0:426)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.performRequest(com.google.firebase:firebase-storage@@17.0.0:280)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.performRequest(com.google.firebase:firebase-storage@@17.0.0:294)
+E/StorageException(19810): 	at com.google.firebase.storage.internal.ExponentialBackoffSender.sendWithExponentialBackoff(com.google.firebase:firebase-storage@@17.0.0:70)
+E/StorageException(19810): 	at com.google.firebase.storage.internal.ExponentialBackoffSender.sendWithExponentialBackoff(com.google.firebase:firebase-storage@@17.0.0:62)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.sendWithRetry(com.google.firebase:firebase-storage@@17.0.0:476)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.beginResumableUpload(com.google.firebase:firebase-storage@@17.0.0:277)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.run(com.google.firebase:firebase-storage@@17.0.0:218)
+E/StorageException(19810): 	... 5 more
+E/StorageException(19810): StorageException has occurred.
+E/StorageException(19810): User does not have permission to access this object.
+E/StorageException(19810):  Code: -13021 HttpResult: 403
+E/StorageException(19810): The server has terminated the upload session
+E/StorageException(19810): java.io.IOException: The server has terminated the upload session
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.serverStateValid(com.google.firebase:firebase-storage@@17.0.0:340)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.shouldContinue(com.google.firebase:firebase-storage@@17.0.0:309)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.run(com.google.firebase:firebase-storage@@17.0.0:223)
+E/StorageException(19810): 	at com.google.firebase.storage.StorageTask.lambda$getRunnable$7(com.google.firebase:firebase-storage@@17.0.0:1106)
+E/StorageException(19810): 	at com.google.firebase.storage.StorageTask$$Lambda$10.run(Unknown Source:2)
+E/StorageException(19810): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+E/StorageException(19810): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+E/StorageException(19810): 	at java.lang.Thread.run(Thread.java:764)
+E/StorageException(19810): Caused by: java.io.IOException: {  "error": {    "code": 403,    "message": "Permission denied. Could not perform this operation"  }}
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.parseResponse(com.google.firebase:firebase-storage@@17.0.0:455)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.parseErrorResponse(com.google.firebase:firebase-storage@@17.0.0:435)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.processResponseStream(com.google.firebase:firebase-storage@@17.0.0:426)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.performRequest(com.google.firebase:firebase-storage@@17.0.0:280)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.performRequest(com.google.firebase:firebase-storage@@17.0.0:294)
+E/StorageException(19810): 	at com.google.firebase.storage.internal.ExponentialBackoffSender.sendWithExponentialBackoff(com.google.firebase:firebase-storage@@17.0.0:70)
+E/StorageException(19810): 	at com.google.firebase.storage.internal.ExponentialBackoffSender.sendWithExponentialBackoff(com.google.firebase:firebase-storage@@17.0.0:62)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.sendWithRetry(com.google.firebase:firebase-storage@@17.0.0:476)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.beginResumableUpload(com.google.firebase:firebase-storage@@17.0.0:277)
+E/StorageException(19810): 	at com.google.firebase.storage.UploadTask.run(com.google.firebase:firebase-storage@@17.0.0:218)
+E/StorageException(19810): 	... 5 more
+W/StorageUtil(19810): no auth token for request
+W/NetworkRequest(19810): no auth token for request
+E/StorageException(19810): StorageException has occurred.
+E/StorageException(19810): User does not have permission to access this object.
+E/StorageException(19810):  Code: -13021 HttpResult: 403
+E/StorageException(19810): {  "error": {    "code": 403,    "message": "Permission denied. Could not perform this operation"  }}
+E/StorageException(19810): java.io.IOException: {  "error": {    "code": 403,    "message": "Permission denied. Could not perform this operation"  }}
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.parseResponse(com.google.firebase:firebase-storage@@17.0.0:455)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.parseErrorResponse(com.google.firebase:firebase-storage@@17.0.0:435)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.processResponseStream(com.google.firebase:firebase-storage@@17.0.0:426)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.performRequest(com.google.firebase:firebase-storage@@17.0.0:280)
+E/StorageException(19810): 	at com.google.firebase.storage.network.NetworkRequest.performRequest(com.google.firebase:firebase-storage@@17.0.0:294)
+E/StorageException(19810): 	at com.google.firebase.storage.internal.ExponentialBackoffSender.sendWithExponentialBackoff(com.google.firebase:firebase-storage@@17.0.0:70)
+E/StorageException(19810): 	at com.google.firebase.storage.internal.ExponentialBackoffSender.sendWithExponentialBackoff(com.google.firebase:firebase-storage@@17.0.0:62)
+E/StorageException(19810): 	at com.google.firebase.storage.GetDownloadUrlTask.run(com.google.firebase:firebase-storage@@17.0.0:74)
+E/StorageException(19810): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+E/StorageException(19810): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+E/StorageException(19810): 	at java.lang.Thread.run(Thread.java:764)
+E/flutter (19810): [ERROR:flutter/lib/ui/ui_dart_state.cc(148)] Unhandled Exception: PlatformException(download_error, User does not have permission to access this object., null)
+E/flutter (19810): #0      StandardMethodCodec.decodeEnvelope (package:flutter/src/services/message_codecs.dart:564:7)
+E/flutter (19810): #1      MethodChannel.invokeMethod (package:flutter/src/services/platform_channel.dart:316:33)
+E/flutter (19810): <asynchronous suspension>
+E/flutter (19810): #2      StorageReference.getDownloadURL (package:firebase_storage/src/storage_reference.dart:142:42)
+E/flutter (19810): <asynchronous suspension>
+E/flutter (19810): #3      _CadastroDocState.enviarPic (package:salvedoc/cadastro_page.dart:55:41)
+E/flutter (19810): <asynchronous suspension>
+E/flutter (19810): #4      _InkResponseState._handleTap (package:flutter/src/material/ink_well.dart:635:14)
+E/flutter (19810): #5      _InkResponseState.build.<anonymous closure> (package:flutter/src/material/ink_well.dart:711:32)
+E/flutter (19810): #6      GestureRecognizer.invokeCallback (package:flutter/src/gestures/recognizer.dart:182:24)
+E/flutter (19810): #7      TapGestureRecognizer._checkUp (package:flutter/src/gestures/tap.dart:365:11)
+E/flutter (19810): #8      TapGestureRecognizer.handlePrimaryPointer (package:flutter/src/gestures/tap.dart:275:7)
+E/flutter (19810): #9      PrimaryPointerGestureRecognizer.handleEvent (package:flutter/src/gestures/recognizer.dart:455:9)
+E/flutter (19810): #10     PointerRouter._dispatch (package:flutter/src/gestures/pointer_router.dart:75:13)
+E/flutter (19810): #11     PointerRouter.route (package:flutter/src/gestures/pointer_router.dart:102:11)
+E/flutter (19810): #12     _WidgetsFlutterBinding&BindingBase&GestureBinding.handleEvent (package:flutter/src/gestures/binding.dart:218:19)
+E/flutter (19810): #13     _WidgetsFlutterBinding&BindingBase&GestureBinding.dispatchEvent (package:flutter/src/gestures/binding.dart:198:22)
+E/flutter (19810): #14     _WidgetsFlutterBinding&BindingBase&GestureBinding._handlePointerEvent (package:flutter/src/gestures/binding.dart:156:7)
+E/flutter (19810): #15     _WidgetsFlutterBinding&BindingBase&GestureBinding._flushPointerEventQueue (package:flutter/src/gestures/binding.dart:102:7)
+E/flutter (19810): #16     _WidgetsFlutterBinding&BindingBase&GestureBinding._handlePointerDataPacket (package:flutter/src/gestures/binding.dart:86:7)
+E/flutter (19810): #17     _rootRunUnary (dart:async/zone.dart:1136:13)
+E/flutter (19810): #18     _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+E/flutter (19810): #19     _CustomZone.runUnaryGuarded (dart:async/zone.dart:931:7)
+E/flutter (19810): #20     _invoke1 (dart:ui/hooks.dart:250:10)
+E/flutter (19810): #21     _dispatchPointerDataPacket (dart:ui/hooks.dart:159:5)
+E/flutter (19810): 
+W/msgobi.salvedo(19810): Accessing hidden method Ldalvik/system/CloseGuard;->close()V (light greylist, linking)
