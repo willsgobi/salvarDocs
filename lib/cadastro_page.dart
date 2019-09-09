@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:path/path.dart';
 
 class CadastroDoc extends StatefulWidget {
   @override
@@ -21,7 +22,8 @@ class _CadastroDocState extends State<CadastroDoc> {
   final _valor = TextEditingController();
 
   double valor;
-  String imagem;
+
+  bool isLoading = false;
 
   @override
   void dispose(){
@@ -47,34 +49,24 @@ class _CadastroDocState extends State<CadastroDoc> {
     return image;
   }
 
-  void enviarPic() async{
-    final FirebaseStorage storage = FirebaseStorage(storageBucket: 'gs://salvardocs-65f5b.appspot.com');
-    StorageUploadTask task = storage.ref().child(DateTime.now().millisecondsSinceEpoch.toString())
-        .putFile(_pickedImage);
-    StorageTaskSnapshot taskSnapshot = await task.onComplete;
-    String url = await taskSnapshot.ref.getDownloadURL();
-    setState(() {
-      imagem = url;
-    });
-    enviar();
-  }
+  void enviar(BuildContext context) async {
 
-  void enviar() async {
-//    enviarPic();
+    StorageReference firebaseStorageRef = FirebaseStorage.instance.ref().child(DateTime.now().millisecondsSinceEpoch.toString());
+    StorageUploadTask uploadTask =  firebaseStorageRef.putFile(_pickedImage);
+    StorageTaskSnapshot taskSnapshot = await uploadTask.onComplete;
+    String url = await taskSnapshot.ref.getDownloadURL();
+
     String titulo = _title.text;
     String descricao = _description.text;
     double valor = double.parse(_valor.text);
 
-    if(_formKey.currentState.validate()){
       await Firestore.instance.collection("documentos")
-          .document().setData({"titulo": titulo, "descricao": descricao, "valor": valor, "img": imagem});
+          .document().setData({"titulo": titulo, "descricao": descricao, "valor": valor, "img": url});
+
       setState(() {
-        _description.text = "";
-        _title.text = "";
-        _valor.text = "";
+        isLoading = false;
+        Navigator.of(context).pop();
       });
-      Navigator.pop(context);
-    }
   }
 
   @override
@@ -84,8 +76,8 @@ class _CadastroDocState extends State<CadastroDoc> {
         title: Text("Cadastrar"),
         centerTitle: true,
       ),
-      body: Container(
-        padding: EdgeInsets.all(25.0),
+      body: isLoading == true ? Center(child: CircularProgressIndicator(),) : Container(
+        padding: EdgeInsets.all(10.0),
         child: Form(
           key: _formKey,
           child: ListView(
@@ -168,22 +160,35 @@ class _CadastroDocState extends State<CadastroDoc> {
                   )
                 ],
               ),
+              SizedBox(height: 15,),
               MaterialButton(
+                height: 40,
+                elevation: 3,
+                hoverElevation: 5,
+                color: Colors.teal,
                 onPressed: (){
-                  _pickedImage.delete();
-                  _title.text = "";
-                  _description.text = "";
-                  _valor.text = "";
-                },
-                child: Text("Limpar"),
-              )
+                  enviar(context);
+                  setState(() {
+                    isLoading = true;
+                  });
+              },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Text("Enviar", style: TextStyle(color: Colors.white, fontSize: 20),)
+                  ],
+                ),
+              ),
             ],
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: enviarPic,
-        child: Icon(Icons.save),
+        onPressed: (){
+          Navigator.of(context).pop();
+        },
+        child: Icon(Icons.clear),
         backgroundColor: Colors.blue,
       ),
     );

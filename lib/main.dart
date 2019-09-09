@@ -40,7 +40,7 @@ class _FirstScreenState extends State<FirstScreen> {
         child: Icon(Icons.add),
       ),
       body: Container(
-        padding: EdgeInsets.all(15),
+        padding: EdgeInsets.all(10),
         child: Column(
           children: <Widget>[
             Expanded(
@@ -80,9 +80,18 @@ class DocList extends StatelessWidget {
   Widget build(BuildContext context) {
     return
         Card(
+          margin: EdgeInsets.only(bottom: 20),
+          elevation: 4,
           child: Column(
             children: <Widget>[
-              Container(child: Image.network(data["img"].toString())),
+              Container(
+                width: 350,
+                height: 200,
+                  child: Image.network(
+                      data["img"],
+                    fit: BoxFit.cover,
+                  )
+              ),
               SizedBox(
                 height: 10,
               ),
